@@ -43,10 +43,8 @@ const Transportation = () => {
       </p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="/path/to/transport1.jpg" alt="Transportation 1" className="rounded shadow" />
-        <img src="/path/to/transport2.jpg" alt="Transportation 2" className="rounded shadow" />
-        <img src="/path/to/transport3.jpg" alt="Transportation 3" className="rounded shadow" />
-        <img src="/path/to/transport4.jpg" alt="Transportation 4" className="rounded shadow" />
+        <img src="https://lnct.ac.in/wp-content/uploads/2021/04/Transportation-min.jpg" alt="Transportation 1" className="rounded shadow" />
+        <img src="https://lnct.ac.in/wp-content/uploads/2021/04/Transportation-LNCT-Group-of-Colleges-5-768x508.jpeg" alt="Transportation 2" className="rounded shadow" />
       </div>
 
       <ul className="list-disc pl-5 space-y-1">

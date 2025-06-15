@@ -66,7 +66,7 @@ const Antiragging = () => {
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-4 text-center">Anti-Ragging Committee | LNCT Group of Colleges</h1>
       <p className="mb-4 text-justify">
-        Ragging is a barbarian act in this civilized world and it is a punishable offense. As per the Directives of The Hon’ble Supreme Court of India all higher educational institutions should curb this menace totally as it is prevalent there. The behavioral patterns among the students should be carefully observed to inculcate human values. Ragging humiliates people and the measures taken against ragging must deter its recurrence.
+        Ragging is a barbarian act in this civilized world and it is a punishable offense. As per the Directives of The Hon'ble Supreme Court of India all higher educational institutions should curb this menace totally as it is prevalent there. The behavioral patterns among the students should be carefully observed to inculcate human values. Ragging humiliates people and the measures taken against ragging must deter its recurrence.
       </p>
       <p className="mb-4 text-justify">
         Since the ensuing academic session is likely to commence shortly, the anti ragging committee of the institute has decided to take up intensive multimedia publicity campaign in order to reinforce anti ragging measures. Prevention is better than cure and so the Anti Ragging Squad of student community is all set to end this inhuman activity.
@@ -90,7 +90,11 @@ const Antiragging = () => {
           <li key={index} className="text-justify">{step}</li>
         ))}
       </ul>
-      <img src="https://lnct.ac.in/wp-content/uploads/2023/09/Anti-768x432.webp" alt=""  className='h-[70vh]'/>
+      <img 
+        src="https://lnct.ac.in/wp-content/uploads/2023/09/Anti-768x432.webp" 
+        alt="Anti-ragging"  
+        className='h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] w-full object-cover rounded-lg shadow-sm'
+      />
     </div>
 
     <LnctFooter/>

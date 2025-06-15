@@ -48,7 +48,7 @@ const DigitaCLassroom = () => {
           Classroom with high-tech software and hardware. Smart Classrooms have been an effective answer to the
           Globalization and the needs of the 21st-century education system.
         </p>
-        <img src="/path/to/your-first-image.png" alt="Smart Classrooms" className="my-4 w-full max-w-md mx-auto" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbpILw5v1FfAwyv2xCC0Gbvr1c-vsXX2sUoA&s" alt="Smart Classrooms" className="my-4 w-full max-w-md mx-auto" />
       </section>
 
       <section>
@@ -57,7 +57,7 @@ const DigitaCLassroom = () => {
           One can go live through the recording of lectures, one can package it by creating the modules and share them
           instantly or keep it safe for students’ revision. These learning modules can be used anytime.
         </p>
-        <img src="/path/to/your-second-image.png" alt="Learning Modules" className="my-4 w-full max-w-md mx-auto" />
+        <img src="https://www.jnctbhopal.ac.in/wp-content/uploads/2024/01/Digital-Classes-min.jpg" alt="Learning Modules" className="my-4 w-full max-w-md mx-auto" />
       </section>
 
       <section>

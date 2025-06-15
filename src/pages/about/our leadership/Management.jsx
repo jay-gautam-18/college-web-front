@@ -9,6 +9,7 @@ import Home1 from '../../../Components/HomeComponets/Home1';
 import Loader from '../../../Components/Loader';
 
 const Management = () => {
+    const {leaders} = useContext(mainContext);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {

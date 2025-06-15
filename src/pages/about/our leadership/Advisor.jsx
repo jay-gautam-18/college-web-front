@@ -9,6 +9,33 @@ import Loader from '../../../Components/Loader';
 
 const Advisor = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedOSD, setSelectedOSD] = useState(null);
+
+  const osdList = [
+    {
+      college: 'LNCT Group Of Colleges',
+      name: 'Dr. Om Prakash Rai',
+      content: (
+        <div className="space-y-3">
+          <p><strong>Full Name:</strong> Dr. Om Prakash Rai</p>
+          <img src="https://lnct.ac.in/wp-content/uploads/2019/05/Dr.-Om-Prakash-Rai.jpg" alt="" />
+          <p><strong>Ph.D.:</strong> Mathematics<br />
+             <strong>Thesis Topic:</strong> Fourier Transform</p>
+          <p><strong>Specialization:</strong> —</p>
+          <p>
+            <strong>Research Summary:</strong> Dr. Rai's research aims to apply mathematical tools, particularly the Fourier Transform, to analyze and solve practical challenges within the tourism industry in Madhya Pradesh. His approach focuses on identifying and modeling key issues in tourism using mathematical formulations and proposing practical, effective solutions tailored to regional contexts.
+          </p>
+          <p><strong>Research Papers Published:</strong> 4 (International), 2 (National)</p>
+          <p><strong>Books Published:</strong> 1</p>
+          <p><strong>Patents:</strong> —</p>
+          <p><strong>Foreign Visits:</strong> —</p>
+          <p><strong>Achievements:</strong> —</p>
+          <p><strong>Total Work Experience:</strong> 67 Years</p>
+          <p><strong>Awards/Projects:</strong> —</p>
+        </div>
+      ),
+    },
+  ];
 
   useEffect(() => {
     // Simulate loading time or wait for data
@@ -22,34 +49,7 @@ const Advisor = () => {
   if (isLoading) {
     return <Loader />;
   }
-const [selectedOSD, setSelectedOSD] = useState(null);
 
-  const osdList = [
-    {
-  college: 'LNCT Group Of Colleges',
-  name: 'Dr. Om Prakash Rai',
-  content: (
-    <div className="space-y-3">
-      <p><strong>Full Name:</strong> Dr. Om Prakash Rai</p>
-      <img src="https://lnct.ac.in/wp-content/uploads/2019/05/Dr.-Om-Prakash-Rai.jpg" alt="" />
-      <p><strong>Ph.D.:</strong> Mathematics<br />
-         <strong>Thesis Topic:</strong> Fourier Transform</p>
-      <p><strong>Specialization:</strong> —</p>
-      <p>
-        <strong>Research Summary:</strong> Dr. Rai’s research aims to apply mathematical tools, particularly the Fourier Transform, to analyze and solve practical challenges within the tourism industry in Madhya Pradesh. His approach focuses on identifying and modeling key issues in tourism using mathematical formulations and proposing practical, effective solutions tailored to regional contexts.
-      </p>
-      <p><strong>Research Papers Published:</strong> 4 (International), 2 (National)</p>
-      <p><strong>Books Published:</strong> 1</p>
-      <p><strong>Patents:</strong> —</p>
-      <p><strong>Foreign Visits:</strong> —</p>
-      <p><strong>Achievements:</strong> —</p>
-      <p><strong>Total Work Experience:</strong> 67 Years</p>
-      <p><strong>Awards/Projects:</strong> —</p>
-    </div>
-  ),
-},
-
-  ];
   return (
     <>
     <Nav/>

@@ -66,6 +66,7 @@ const courses = [
 
 const CollegeLNCTEecellence = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {
     // Simulate loading time or wait for data
@@ -79,9 +80,6 @@ const CollegeLNCTEecellence = () => {
   if (isLoading) {
     return <Loader />;
   }
-
-
-const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenIndex(index === openIndex ? null : index);

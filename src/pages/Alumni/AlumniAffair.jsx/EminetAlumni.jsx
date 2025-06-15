@@ -1,6 +1,5 @@
 import Loader from '../../../Components/Loader'
 import React, { useEffect, useState } from 'react'
-import Slider from 'react-slick';
 import Nav from '../../../Components/Nav';
 import LnctFooter from '../../../Components/LnctFooter';
 import Home1 from '../../../Components/HomeComponets/Home1';
@@ -76,89 +75,76 @@ const alumniGroups = [
   },
 ];
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 600,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: true,
-  autoplay: true,
-  autoplaySpeed: 7000,
-  responsive: [
-    { breakpoint: 1024, settings: { slidesToShow: 2 } },
-    { breakpoint: 640, settings: { slidesToShow: 1 } },
-  ],
-};
-
 const EminentAlumni = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    // Simulate loading time or wait for data
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000); // Adjust time as needed
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
-    return <Loader />;
-  }
-  return(
-  <>
-    <Nav />
-    <Home1
-      heading={"Eminent Alumni - LNCT Bhopal | Central India's No. 1 Engineering Institute - Bhopal"}
-      description={"Discover the success stories of our distinguished alumni who have made significant contributions across various sectors."}
-      image={"https://lnct.ac.in/wp-content/uploads/2021/04/Student-Contect-1-300x212.png"}
-    />
-    <main className="max-w-7xl mx-auto px-4 py-16 space-y-16">
-      <h1 className="text-4xl font-bold text-center text-blue-900">
-        Eminent Alumni of LNCT Group
-      </h1>
-      <p className="text-center text-gray-700 max-w-3xl mx-auto leading-relaxed">
-        Our alumni are leading across civil services, defense, public sector,
-        research, and corporates—shaping national and global impact.
-      </p>
+    return <Loader />;
+  }
+  return (
+    <>
+      <Nav />
+      <Home1
+        heading={"Eminent Alumni - LNCT Bhopal | Central India's No. 1 Engineering Institute - Bhopal"}
+        description={"Discover the success stories of our distinguished alumni who have made significant contributions across various sectors."}
+        image={"https://lnct.ac.in/wp-content/uploads/2021/04/Student-Contect-1-300x212.png"}
+      />
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-16 space-y-12 sm:space-y-16">
+        <div className="text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+            Eminent Alumni of LNCT Group
+          </h1>
+          <p className="text-sm sm:text-base text-gray-700 max-w-3xl mx-auto leading-relaxed px-4">
+            Our alumni are leading across civil services, defense, public sector,
+            research, and corporates—shaping national and global impact.
+          </p>
+        </div>
 
-      {alumniGroups.map((group, gi) => (
-        <section key={gi}>
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">{group.title}</h2>
-          <Slider {...sliderSettings}>
-            {group.items.map((alum, ai) => (
-              <div key={ai} className="px-3">
-                <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-                  <img
-                    src={alum.img || "https://via.placeholder.com/150"}
-                    alt={alum.name}
-                    className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full border-4 border-blue-500 mb-4 object-cover"
-                  />
-                  <h3 className="text-lg font-semibold">{alum.name}</h3>
-                  <p className="text-sm text-gray-600">{alum.batch}</p>
-                  <p className="text-sm text-gray-500 italic">{alum.position}</p>
+        {alumniGroups.map((group, gi) => (
+          <section key={gi} className="mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-6 px-4">{group.title}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {group.items.map((alum, ai) => (
+                <div key={ai} className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center">
+                  <div className="relative mb-4 w-full flex justify-center">
+                    <img
+                      src={alum.img || "https://via.placeholder.com/150"}
+                      alt={alum.name}
+                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-blue-500 object-cover"
+                    />
+                  </div>
+                  <div className="space-y-2 w-full">
+                    <h3 className="text-base sm:text-lg font-semibold text-blue-900 line-clamp-2">{alum.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 line-clamp-1">{alum.batch}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 italic line-clamp-2">{alum.position}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
-        </section>
-      ))}
+              ))}
+            </div>
+          </section>
+        ))}
 
-      <div className="text-center mt-12">
-        <a
-          href="/files/Alumni-News-Updates.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
-        >
-          📄 View Alumni News & Updates
-        </a>
-      </div>
-    </main>
-    <LnctFooter />
-  </>
+        <div className="text-center mt-8 sm:mt-12">
+          <a
+            href="/files/Alumni-News-Updates.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
+          >
+            📄 View Alumni News & Updates
+          </a>
+        </div>
+      </main>
+      <LnctFooter />
+    </>
   );
 };
-
 
 export default EminentAlumni;

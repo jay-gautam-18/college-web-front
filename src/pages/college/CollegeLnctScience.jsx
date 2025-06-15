@@ -65,6 +65,7 @@ const courses = [
 
 const CollegeLnctScience = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {
     // Simulate loading time or wait for data
@@ -78,8 +79,6 @@ const CollegeLnctScience = () => {
   if (isLoading) {
     return <Loader />;
   }
-
-  const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenIndex(index === openIndex ? null : index);
@@ -159,7 +158,7 @@ const CollegeLnctScience = () => {
             <br />
             <span className="ml-4 block"> Entrepreneur Management Development Cell</span>
           </li>
-          <li>1st in M.P. rated ‘A’ Category by the High Court committee for fixation of fee</li>
+          <li>1st in M.P. rated 'A' Category by the High Court committee for fixation of fee</li>
           <li>
             1st Self-Financed institutes of M.P. to have following departments/Chapters/Cells/Clubs:
             <ul className="list-none mt-2 space-y-2 ml-4">

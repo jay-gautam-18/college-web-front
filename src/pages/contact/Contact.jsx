@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import LnctFooter from '../../Components/LnctFooter'
 import Home1 from '../../Components/HomeComponets/Home1'
 import Nav from '../../Components/Nav'
+import Loader from '../../Components/Loader'
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(true);

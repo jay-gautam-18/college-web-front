@@ -9,7 +9,9 @@ import { mainContext } from '../../../Context/Maincontext';
 import Loader from '../../../Components/Loader';
 
 const Osd = () => {
+  const {osdList} = useContext(mainContext); 
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedOSD, setSelectedOSD] = useState(null);
 
   useEffect(() => {
     // Simulate loading time or wait for data
@@ -23,10 +25,7 @@ const Osd = () => {
   if (isLoading) {
     return <Loader />;
   }
-const [selectedOSD, setSelectedOSD] = useState(null);
 
-  const {osdList} = useContext(mainContext); 
- 
   return (
     <>
     <Nav/>

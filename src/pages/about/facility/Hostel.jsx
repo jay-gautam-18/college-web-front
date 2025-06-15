@@ -66,11 +66,8 @@ const Hostel = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <img src="/path/to/image1.jpg" alt="Hostel Image 1" className="rounded shadow" />
-        <img src="/path/to/image2.jpg" alt="Hostel Image 2" className="rounded shadow" />
-        <img src="/path/to/image3.jpg" alt="Hostel Image 3" className="rounded shadow" />
-        <img src="/path/to/image4.jpg" alt="Hostel Image 4" className="rounded shadow" />
-        <img src="/path/to/image5.jpg" alt="Hostel Image 5" className="rounded shadow md:col-span-2" />
+        <img src="https://lnct.ac.in/wp-content/uploads/2021/04/best-hostels-for-students-7-768x512.jpeg" alt="Hostel Image 1" className="rounded shadow" />
+        <img src="https://lnct.ac.in/wp-content/uploads/2021/04/best-hostels-for-students-7-768x512.jpeg" alt="Hostel Image 2" className="rounded shadow" />
       </div>
 
       <h3 className="text-2xl font-semibold">General Rules</h3>

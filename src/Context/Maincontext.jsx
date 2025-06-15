@@ -157,19 +157,6 @@ const Maincontext = (props) => {
       description: 'Placement cell and student career opportunities.',
       links: [
         { label: 'Career Development Cell', path: '/placement/career-development-cell', subLinks: [] },
-        {
-          label: 'Clubs',
-          path: '/placement/clubs',
-          subLinks: [
-            { label: 'IIC Club', path: '/placement/clubs/iic-club' },
-            { label: 'Hackathon', path: '/placement/clubs/hackathon' },
-            { label: 'Artificial Intelligence Club', path: '/placement/clubs/ai-club' },
-            { label: 'LNCT Literacy Club', path: '/placement/clubs/literacy-club' },
-            { label: 'Quest Nature Club', path: '/placement/clubs/quest-nature-club' },
-            { label: 'LNCT Music Club', path: '/placement/clubs/music-club' },
-            { label: 'LNCT Photo Club', path: '/placement/clubs/photo-club' },
-          ],
-        },
         { label: 'Regular Activities', path: '/placement/regular-activities', subLinks: [] },
         { label: 'Placement Records', path: '/placement/placement-records', subLinks: [] },
         { label: 'Industry Interaction', path: '/placement/industry-interaction', subLinks: [] },
@@ -236,7 +223,7 @@ const Maincontext = (props) => {
               ]
           },
           { label: "ALMA Connect", path: "/alumni/alma-connect", subLinks: [
-            { label: "GALA", path: "/alumni/almaconnects/alma", subLinks: [] }
+            { label: "GALA", path: "https://www.lnctalumni.in/", subLinks: [] }
           ] },
           { label: "Alumni Letter", path: "/alumni/alumni-letter", subLinks: [] },
           { label: "Eminent Alumni", path: "/alumni/eminent-alumni", subLinks: [] }

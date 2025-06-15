@@ -6,6 +6,7 @@ import Loader from '../../Components/Loader';
 
 const CollegeLNCTMCA = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [selected, setSelected] = useState('mission');
 
   useEffect(() => {
     // Simulate loading time or wait for data
@@ -19,8 +20,6 @@ const CollegeLNCTMCA = () => {
   if (isLoading) {
     return <Loader />;
   }
-
-const [selected, setSelected] = useState('mission');
 
   return (
     <div>
@@ -46,7 +45,7 @@ const [selected, setSelected] = useState('mission');
           {/* Text Section */}
           <div className="lg:w-3/5 text-justify text-gray-800 leading-relaxed space-y-4">
             <p className='text-xl'>
-             Master of Computer Application (MCA) is a 2  year master degree course in Computer Applications. MCA course is very popular as it gives a post Graduation degree and job opportunities are equivalent to Computer Science and Engineering. All MNC’s are looking for MCA graduates for their Computer science and IT jobs. LNCT is a renowned name for providing maximum in campus job opportunities to MCA students and the Alumni’s of MCA are working in various senior positions in top IT companies in India and abroad.
+             Master of Computer Application (MCA) is a 2  year master degree course in Computer Applications. MCA course is very popular as it gives a post Graduation degree and job opportunities are equivalent to Computer Science and Engineering. All MNC's are looking for MCA graduates for their Computer science and IT jobs. LNCT is a renowned name for providing maximum in campus job opportunities to MCA students and the Alumni's of MCA are working in various senior positions in top IT companies in India and abroad.
                  </p>
             <br />
            <p>

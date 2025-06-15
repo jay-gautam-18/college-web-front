@@ -10,6 +10,8 @@ import Loader from '../../../Components/Loader';
 
 const Principal = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedOSD, setSelectedOSD] = useState(null);
+  const {principalList} = useContext(mainContext);
 
   useEffect(() => {
     // Simulate loading time or wait for data
@@ -23,9 +25,7 @@ const Principal = () => {
   if (isLoading) {
     return <Loader />;
   }
-  const [selectedOSD, setSelectedOSD] = useState(null);
 
-  const {principalList} = useContext(mainContext);
   return (
     <>
     <Nav/>
@@ -66,8 +66,8 @@ const Principal = () => {
 
       {selectedOSD !== null && (
         <div className="mt-6 p-4 border-l-4 border-blue-500 bg-blue-50 rounded-md shadow">
-          <h3 className="text-lg font-semibold mb-2">{osdList[selectedOSD].name}</h3>
-          {osdList[selectedOSD].content}
+          <h3 className="text-lg font-semibold mb-2">{principalList[selectedOSD].name}</h3>
+          {principalList[selectedOSD].content}
         </div>
       )}
     </div>

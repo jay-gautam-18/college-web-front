@@ -46,10 +46,8 @@ const HealthCare = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <img src="/path/to/image1.jpg" alt="Healthcare staff" className="w-full h-auto rounded shadow" />
-        <img src="/path/to/image2.jpg" alt="Health centre building" className="w-full h-auto rounded shadow" />
-        <img src="/path/to/image3.jpg" alt="Doctor consultation" className="w-full h-auto rounded shadow" />
-        <img src="/path/to/image4.jpg" alt="Medical equipment" className="w-full h-auto rounded shadow" />
+        <img src="https://lnct.ac.in/wp-content/uploads/2021/04/Health-Care-LNCT-Colleges-150x150.jpg" alt="Healthcare staff" className="w-full h-auto rounded shadow" />
+        <img src="https://lnct.ac.in/wp-content/uploads/2021/04/Helth-Care-LNCT-Group-150x150.jpg" alt="Health centre building" className="w-full h-auto rounded shadow" />
       </div>
     </div>
     <LnctFooter/>

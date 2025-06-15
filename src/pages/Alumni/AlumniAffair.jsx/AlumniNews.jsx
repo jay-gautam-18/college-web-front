@@ -10,7 +10,7 @@ const alumniTestimonials = [
     name: "Shaiqurrab Ansari",
     company: "Wipro Technologies",
     img: "https://lnct.ac.in/wp-content/uploads/2023/10/image003.jpg",
-    text: `I decided to choose the best private engineering college for my future growth. We all look for some good features/qualities in our institute i.e. it should give us best knowledge both theoretical as well practical. Another feature that we look at in the institute is that after investing four years of our life we should get good job opportunity and yes as it rightly said that “dreams do come true”, finally my search ended when I got admission to the best private engineering college of Central India i.e. in Lakshmi Narain College of Technology (LNCT Group), Bhopal, M.P.
+    text: `I decided to choose the best private engineering college for my future growth. We all look for some good features/qualities in our institute i.e. it should give us best knowledge both theoretical as well practical. Another feature that we look at in the institute is that after investing four years of our life we should get good job opportunity and yes as it rightly said that "dreams do come true", finally my search ended when I got admission to the best private engineering college of Central India i.e. in Lakshmi Narain College of Technology (LNCT Group), Bhopal, M.P.
     
 Choosing LNCT Group, without any doubt proved to be the best decision of my life. I did Bachelor of Engineering in the field of Electronics & Communication from this college. This college provided me the best education facility. All the teachers here are experienced with lots of theoretical & practical knowledge and they convey the same knowledge to students as well. Not only theoretical knowledge but also practical knowledge is also provided by doing lots of lab experiments. The best thing about LNCT Group is placement offers. It again proved to be the wise choice for me to select LNCT Group for the carrier. I have seen people of other institutes struggling to get jobs. But that is not the case if you have chosen LNCT Group as your institute. LNCT Group offers you an opportunity to work with different MNCs like Amazon, Wipro Technology, Cognizant, Capgemini, & many more.
 
@@ -22,7 +22,7 @@ Thanks`
   name: "Ayush Chopra",
   company: "VMWARE, India",
   img: "https://lnct.ac.in/wp-content/uploads/2023/10/image011.jpg",
-  text: `My time at LNCT College, Bhopal, was truly transformative. The dedicated faculty provided not only excellent education but also personal guidance. The campus boasts modern facilities and a rich library. LNCT emphasizes holistic development, offering diverse extracurricular activities. Industry-focused initiatives, like guest lectures and workshops, enhanced practical knowledge. The college’s strong sense of community, along with a diverse student body, created a welcoming environment. As an alumnus, I credit LNCT with equipping me academically and personally, setting the stage for my successful career. I wholeheartedly recommend LNCT College to those seeking a top-tier education in Bhopal. Thanks.`
+  text: `My time at LNCT College, Bhopal, was truly transformative. The dedicated faculty provided not only excellent education but also personal guidance. The campus boasts modern facilities and a rich library. LNCT emphasizes holistic development, offering diverse extracurricular activities. Industry-focused initiatives, like guest lectures and workshops, enhanced practical knowledge. The college's strong sense of community, along with a diverse student body, created a welcoming environment. As an alumnus, I credit LNCT with equipping me academically and personally, setting the stage for my successful career. I wholeheartedly recommend LNCT College to those seeking a top-tier education in Bhopal. Thanks.`
 },
 {
   name: "Dharmita Kaithwas",
@@ -34,13 +34,13 @@ Thanks`
   name: " Mr. Harshit Raj",
   company: "DRDO, Hyderabad",
   img: "https://lnct.ac.in/wp-content/uploads/2023/10/image007.jpg",
-  text: `I am a 2019 batch passout from CSE branch, LNCT Bhopal. I was placed in an IT company through on-campus drive, but I got selected in Defence Research Development Organisation (DRDO) and I accepted the offer from DRDO over the IT job. Through my initial days in college, all Professors, T&P department, Management helped me a lot and guided me in studies and with the result of that I was able to compete at All India Level and cleared the DRDO examination. Finally with God’s grace and blessing of parents and teachers, I am currently doing my job in DRDO Hyderabad happily. Thanks`
+  text: `I am a 2019 batch passout from CSE branch, LNCT Bhopal. I was placed in an IT company through on-campus drive, but I got selected in Defence Research Development Organisation (DRDO) and I accepted the offer from DRDO over the IT job. Through my initial days in college, all Professors, T&P department, Management helped me a lot and guided me in studies and with the result of that I was able to compete at All India Level and cleared the DRDO examination. Finally with God's grace and blessing of parents and teachers, I am currently doing my job in DRDO Hyderabad happily. Thanks`
 },
 {
   name: " Mr. Napendra Kumar Chourey",
   company: "Indian Para Athlete",
   img: "https://lnct.ac.in/wp-content/uploads/2023/10/image001.jpg",
-  text: `I was born safely in the world, but at the age of nine months, a serious illness made me a victim. I had become very weak after being ill for several months. After prolonged treatment, I finally recovered from death, but both my legs and back stopped working. After completing his schooling, he took admission to BE Computer Science in LNCT College, Bhopal in 2012. After completion of the BE degree he did M.Tech Honors from LNCT in 2016-18. During this, when the OSD of the group told Ashok Rai Sir about him going into athletics, he was very happy. He said that “a well-educated person becomes successful in any field quickly”. “Continue your studies along with sports”. This advice proved to be very important in life. Rai sir has always been my good guide. All the teachers of the LNCT group kept encouraging me. The benefit of his experience was always there.
+  text: `I was born safely in the world, but at the age of nine months, a serious illness made me a victim. I had become very weak after being ill for several months. After prolonged treatment, I finally recovered from death, but both my legs and back stopped working. After completing his schooling, he took admission to BE Computer Science in LNCT College, Bhopal in 2012. After completion of the BE degree he did M.Tech Honors from LNCT in 2016-18. During this, when the OSD of the group told Ashok Rai Sir about him going into athletics, he was very happy. He said that "a well-educated person becomes successful in any field quickly". "Continue your studies along with sports". This advice proved to be very important in life. Rai sir has always been my good guide. All the teachers of the LNCT group kept encouraging me. The benefit of his experience was always there.
   
   `
 }
@@ -69,8 +69,8 @@ const AlumniNews = () => {
   }, []);
 
   if (isLoading) {
-    return <Loader />;
-  }
+    return <Loader />;
+  }
   return (
     <>
     <Nav/>
@@ -79,44 +79,51 @@ const AlumniNews = () => {
     description={"Group of 50,000+ engineers, technologists, scientists, managers, and entrepreneurs and more."}
     image={"https://lnct.ac.in/wp-content/uploads/2021/04/Student-Contect-1-300x212.png"}/>
 
+    <div className="w-full max-w-4xl mx-auto py-6 sm:py-10 px-4 sm:px-6">
+      {/* News and Updates Section */}
+      <div className="w-full flex flex-col justify-center items-center max-w-4xl mx-auto px-4 mb-12 sm:mb-20">
+        <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-3 text-center">News and Updates</h2>
+        <a
+          href="https://lnct.ac.in/wp-content/uploads/2023/10/Alumni-News-Updates.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-black text-white px-4 py-2 rounded-lg hover:bg-blue-900 hover:text-white border-2 border-black transition-all duration-300 transform hover:scale-105"
+        >
+          View Latest News & Updates
+        </a>
+      </div>
 
-
-    <div className="w-full  max-w-4xl mx-auto py-10 px-4">
-
-<div className="w-full flex  flex-col justify-center items-center max-w-4xl mx-auto px-4 mb-20">
-  <h2 className="text-2xl font-bold text-blue-900 mb-3">News and Updates</h2>
-  <a
-    href="https://lnct.ac.in/wp-content/uploads/2023/10/Alumni-News-Updates.pdf" // Place your PDF in the public/files/ directory
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-transparent hover:text-black border transition"
-  >
-    View Latest News & Updates
-  </a>
-</div>
-
-
-      <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Alumni Testimonials</h2>
-      <Slider {...settings}>
-  {alumniTestimonials.map((alum, index) => (
-    <div
-      key={index}
-      className="bg-white px-4 py-6 md:px-8 md:py-8 max-w-3xl mx-auto rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center"
-    >
-      <img
-        src={alum.img}
-        alt={alum.name}
-        className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover mb-4 border-4 border-blue-500"
-      />
-      <p className="text-gray-700 text-sm md:text-base mb-4 italic leading-relaxed max-h-[350px] overflow-y-auto px-2 scrollbar-thin scrollbar-hidden scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-        "{alum.text}"
-      </p>
-      <h3 className="text-lg md:text-xl font-semibold text-blue-800">{alum.name}</h3>
-      <p className="text-sm text-gray-500">{alum.company}</p>
-    </div>
-  ))}
-</Slider>
-
+      {/* Testimonials Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-blue-900">Alumni Testimonials</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          {alumniTestimonials.map((alum, index) => (
+            <div
+              key={index}
+              className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 h-full"
+            >
+              <div className="flex flex-col items-center text-center h-full">
+                <div className="relative mb-4">
+                  <img
+                    src={alum.img}
+                    alt={alum.name}
+                    className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-blue-500 shadow-md"
+                  />
+                </div>
+                <div className="flex-1 w-full">
+                  <p className="text-gray-700 text-sm sm:text-base mb-4 italic leading-relaxed h-[200px] sm:h-[250px] scrollbar-hidden overflow-y-auto px-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+                    "{alum.text}"
+                  </p>
+                  <div className="mt-auto">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-blue-800 mb-1">{alum.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-500">{alum.company}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
     <LnctFooter/>
     </>
