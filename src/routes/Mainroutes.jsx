@@ -30,12 +30,12 @@ import AlumniNews from '../pages/Alumni/AlumniAffair.jsx/AlumniNews';
 
 const Home = lazy(() => import('../pages/Home'));
 const RegistrationForm = lazy(() => import('../Components/RegistrationForm'));
-const Trust = lazy(() => import('../pages/about/lnct-group/trust'));
+const Trust = lazy(() => import('../pages/about/lnct-group/Trust'));
 const OurVision = lazy(() => import('../pages/about/lnct-group/OurVision'));
-const Credo = lazy(() => import('../pages/about/lnct-group/credo'));
+const Credo = lazy(() => import('../pages/about/lnct-group/Credo'));
 const Management = lazy(() => import('../pages/about/our leadership/Management'));
 const Osd = lazy(() => import('../pages/about/our leadership/Osd'));
-const Principal = lazy(() => import('../pages/about/our leadership/principal'));
+const Principal = lazy(() => import('../pages/about/our leadership/Principal'));
 const Advisor = lazy(() => import('../pages/about/our leadership/Advisor'));
 const Auditorium = lazy(() => import('../pages/about/infrastructure/Auditorium'));
 const Seminarhall = lazy(() => import('../pages/about/infrastructure/Seminarhall'));
