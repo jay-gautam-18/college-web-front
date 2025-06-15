@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Loader = () => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-[#ffecb9] z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-[#fff9e8] z-50">
       <div className="relative">
         {/* Outer ring */}
         <motion.div

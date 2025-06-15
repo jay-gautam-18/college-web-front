@@ -7,7 +7,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="bg-[#ffecb9] syne-text">
+    <div className="bg-[#fff9e8] syne-text">
       <Suspense fallback={<Loader />}>
         <Mainroutes/>
       </Suspense>
