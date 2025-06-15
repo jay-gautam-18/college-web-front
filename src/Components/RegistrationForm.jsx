@@ -47,7 +47,7 @@ const RegistrationForm = ({heading}) => {
         setdata([...data, registration]);
         
         try {
-            const res = await axios.post('http://localhost:5000/api/submit', registration, {
+            const res = await axios.post('https://college-web-back.onrender.com/api/submit', registration, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
