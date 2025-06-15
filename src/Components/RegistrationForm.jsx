@@ -50,20 +50,28 @@ const RegistrationForm = ({heading}) => {
             const res = await axios.post('https://college-web-back.onrender.com/api/submit', registration, {
                 headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+                timeout: 10000 // 10 second timeout
             });
             reset();
             setShowSuccess(true);
             // Store the current path for redirection
             sessionStorage.setItem('returnPath', location.pathname);
         } catch (error) {
-            console.error('Submission error:', error);
-            if (error.response) {
+            console.error('Submission error:', {
+                message: error.message,
+                code: error.code,
+                response: error.response?.data,
+                status: error.response?.status
+            });
+            if (error.code === 'ECONNABORTED') {
+                alert('Request timed out. Please try again.');
+            } else if (error.response) {
                 alert(error.response.data.error || 'Submission failed');
             } else if (error.request) {
-                alert('No response from server. Please check your internet connection.');
+                alert('No response from server. Please check your internet connection and try again.');
             } else {
-                alert('An error occurred while submitting the form.');
+                alert('An error occurred while submitting the form. Please try again.');
             }
         }
     };
