@@ -36,45 +36,54 @@ const RegistrationForm = ({heading}) => {
         reset
     } = useForm();
 
-    const onSubmit = async (formData) => {
-        const fullPhoneNumber = `${formData.countryCode}${formData.phone}`;
-        const registration = {
-            id: nanoid(),
-            ...formData,
-            phone: fullPhoneNumber,
-            submittedAt: new Date().toISOString()
-        };
-        setdata([...data, registration]);
-        
-        try {
-            const res = await axios.post('https://college-web-back-1.onrender.com/api/submit', registration, {
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                timeout: 10000 // 10 second timeout
-            });
-            reset();
-            setShowSuccess(true);
-            // Store the current path for redirection
-            sessionStorage.setItem('returnPath', location.pathname);
-        } catch (error) {
-            console.error('Submission error:', {
-                message: error.message,
-                code: error.code,
-                response: error.response?.data,
-                status: error.response?.status
-            });
-            if (error.code === 'ECONNABORTED') {
-                alert('Request timed out. Please try again.');
-            } else if (error.response) {
-                alert(error.response.data.error || 'Submission failed');
-            } else if (error.request) {
-                alert('No response from server. Please check your internet connection and try again.');
-            } else {
-                alert('An error occurred while submitting the form. Please try again.');
-            }
-        }
-    };
+const onSubmit = async (formData) => {
+  const fullPhoneNumber = `${formData.countryCode}${formData.phone}`;
+  const registration = {
+    id: nanoid(),
+    ...formData,
+    phone: fullPhoneNumber,
+    submittedAt: new Date().toISOString()
+  };
+
+  setdata([...data, registration]);
+
+  try {
+    const res = await axios.post(
+      'https://college-web-back.onrender.com/api/submit',
+      registration,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // ❌ DON'T use withCredentials unless backend sets cookies
+        // withCredentials: true // Only needed if you're using cookies or sessions
+        timeout: 10000 // 10 seconds timeout
+      }
+    );
+
+    reset();
+    setShowSuccess(true);
+    sessionStorage.setItem('returnPath', location.pathname);
+
+  } catch (error) {
+    console.error('Submission error:', {
+      message: error.message,
+      code: error.code,
+      response: error.response?.data,
+      status: error.response?.status
+    });
+
+    if (error.code === 'ECONNABORTED') {
+      alert('Request timed out. Please try again.');
+    } else if (error.response) {
+      alert(error.response.data.error || 'Submission failed');
+    } else if (error.request) {
+      alert('No response from server. Please check your internet connection and try again.');
+    } else {
+      alert('An error occurred while submitting the form. Please try again.');
+    }
+  }
+};
 
     const handleSuccessClose = () => {
         setShowSuccess(false);
