@@ -49,7 +49,7 @@ const onSubmit = async (formData) => {
 
   try {
     const res = await axios.post(
-      'https://college-web-back-1.onrender.com/api/submit',
+      'https://college-web-back-v3fc.onrender.com/api/submit',
       registration,
       {
         headers: {
