@@ -57,7 +57,7 @@ const onSubmit = async (formData) => {
         },
         // ❌ DON'T use withCredentials unless backend sets cookies
         // withCredentials: true // Only needed if you're using cookies or sessions
-        timeout: 10000 // 10 seconds timeout
+        // timeout: 10000 
       }
     );
 
